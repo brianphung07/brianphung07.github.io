@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Brian Phung, Rutgers Business School accounting student. Explore financial analysis projects, skills, and professional experience.">
+  <title>Brian Phung | Accounting &amp; Finance Portfolio</title>
+  <style>
+    :root{--red:#b5122b;--deep:#880c20;--ink:#242329;--muted:#64616a;--pink:#fff5f6;--line:#eadde0}
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth;scroll-padding-top:24px}
+    body{margin:0;background:#fff;color:var(--ink);font:16px/1.65 Arial,Helvetica,sans-serif}
+    a{color:var(--red);text-underline-offset:4px}
+    a:focus-visible,summary:focus-visible{outline:3px solid var(--red);outline-offset:5px}
+    .wrap{width:min(1120px,90%);margin:auto}
+    .skip{position:absolute;top:-100px;left:20px;background:white;padding:12px}
+    .skip:focus{top:8px}
+    header{border-top:5px solid var(--red);border-bottom:1px solid var(--line)}
+    .nav{display:flex;justify-content:space-between;align-items:center;gap:24px;padding:22px 0}
+    .brand{font-weight:800;font-size:1.1rem;text-decoration:none;letter-spacing:.05em;color:var(--ink)}
+    .brand span{color:var(--red)}
+    nav{display:flex;flex-wrap:wrap;gap:24px}
+    nav a{font-size:.88rem;text-decoration:none;color:var(--muted)}
+    nav a:hover{color:var(--red);text-decoration:underline}
+    .hero{display:grid;grid-template-columns:1.5fr 1fr;align-items:center;gap:70px;padding:76px 0}
+    .eyebrow{color:var(--red);font-size:.75rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase}
+    h1{font-family:Georgia,serif;font-size:clamp(3.7rem,7vw,6.1rem);line-height:1.04;letter-spacing:-.04em;margin:20px 0 24px}
+    h1 span{color:var(--red)}
+    .statement{color:var(--muted);font-size:1.15rem;max-width:620px}
+    .actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+    .button{display:inline-block;border:1px solid var(--red);border-radius:5px;padding:11px 20px;text-decoration:none;font-weight:700;font-size:.9rem}
+    .button.primary{background:var(--red);color:white}
+    .button:hover{background:var(--deep);color:white}
+    .portrait{margin:0;border:1px solid var(--line);padding:12px;background:var(--pink);border-radius:16px}
+    .portrait img{display:block;width:100%;height:auto;aspect-ratio:1;object-fit:cover;border-radius:9px}
+    .portrait figcaption{padding:16px 10px 6px;display:flex;justify-content:space-between;gap:12px;font-size:.8rem;color:var(--muted)}
+    .portrait strong{color:var(--red)}
+    .facts{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:25px 0;gap:20px}
+    .fact strong{display:block;font-size:1.15rem}
+    .fact span{color:var(--muted);font-size:.85rem}
+    section{padding:62px 0;border-bottom:1px solid var(--line)}
+    h2{font-family:Georgia,serif;font-size:2.35rem;line-height:1.2;margin:12px 0 18px}
+    .intro{color:var(--muted);max-width:670px}
+    .skills-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:30px}
+    .skill-box{border-left:3px solid var(--red);padding:4px 22px}
+    h3{font-size:1.1rem;line-height:1.4;margin:0 0 12px}
+    .skill-box ul{padding-left:18px;color:var(--muted);font-size:.95rem}
+    .projects{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;margin-top:30px}
+    .card{padding:32px;border:1px solid var(--line);border-radius:12px;background:var(--pink)}
+    .number{font-family:Georgia,serif;font-size:2.4rem;color:var(--red)}
+    .tag{font-size:.72rem;text-transform:uppercase;letter-spacing:.12em;color:var(--muted);margin:18px 0 10px}
+    .card p{color:var(--muted)}
+    .tools{font-size:.82rem;font-weight:bold;color:var(--red)!important}
+    details{border-top:1px solid var(--line);padding-top:16px;margin-top:22px}
+    summary{cursor:pointer;color:var(--red);font-weight:700;font-size:.9rem}
+    details ul{padding-left:20px;font-size:.93rem;color:var(--muted)}
+    .experience{display:grid;grid-template-columns:1fr 1fr;gap:42px;margin-top:30px}
+    .role{padding-left:22px;border-left:3px solid var(--red)}
+    .role p{color:var(--muted);margin:8px 0}
+    .date{font-size:.8rem;letter-spacing:.03em;color:var(--red)!important}
+    .contact{padding:42px;border-radius:12px;background:var(--red);color:#fff;display:flex;justify-content:space-between;align-items:center;gap:30px;margin:58px 0}
+    .contact h2{margin:0 0 12px}
+    .contact p{margin:0}
+    .contact-links{display:flex;flex-direction:column;gap:10px;overflow-wrap:anywhere}
+    .contact a{color:#fff}
+    footer{padding:26px 0;font-size:.83rem;color:var(--muted);border-top:1px solid var(--line)}
+    @media(max-width:850px){.hero{grid-template-columns:1fr;gap:34px;padding:46px 0}.portrait{max-width:380px}.skills-grid{grid-template-columns:1fr}.projects,.experience{grid-template-columns:1fr}.contact{align-items:flex-start;flex-direction:column}.nav{align-items:flex-start}nav{gap:14px}}
+    @media(max-width:480px){.nav{flex-direction:column;gap:12px}.facts{grid-template-columns:1fr}.hero{padding:36px 0}.card{padding:24px}.contact{padding:26px}section{padding:42px 0}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+  </style>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header>
+    <div class="wrap nav">
+      <a class="brand" href="#about">BRIAN PHUNG<span>.</span></a>
+      <nav aria-label="Main navigation">
+        <a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#experience">Experience</a><a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+  <main id="main" class="wrap">
+    <div class="hero" id="about">
+      <div>
+        <p class="eyebrow">Rutgers Business School · Accounting</p>
+        <h1>Brian<br><span>Phung.</span></h1>
+        <p class="statement">I am an accounting student at Rutgers Business School with experience in financial market analysis, portfolio risk management, and tutoring, working toward a career in auditing.</p>
+        <div class="actions"><a class="button primary" href="#projects">View my projects &rarr;</a><a class="button" href="https://www.linkedin.com/in/brian-phung-258018384/">Connect on LinkedIn</a></div>
+      </div>
+      <figure class="portrait">
+        <img src="headshot.jpg" alt="Portrait of Brian Phung" width="1000" height="1000" fetchpriority="high">
+        <figcaption><strong>Accounting &amp; finance</strong><span>Piscataway, NJ</span></figcaption>
+      </figure>
+    </div>
+    <div class="facts" aria-label="Education overview">
+      <div class="fact"><strong>B.S. in Accounting</strong><span>Rutgers University–New Brunswick</span></div>
+      <div class="fact"><strong>3.6 / 4.0 GPA</strong><span>Academic performance</span></div>
+      <div class="fact"><strong>May 2029</strong><span>Expected graduation</span></div>
+    </div>
+    <section id="skills" aria-labelledby="skills-title">
+      <p class="eyebrow">What I bring</p><h2 id="skills-title">Skills &amp; credentials</h2>
+      <p class="intro">A foundation in accounting and finance, supported by hands-on market research and experience communicating with students and professionals.</p>
+      <div class="skills-grid">
+        <div class="skill-box"><h3>Analysis &amp; technology</h3><ul><li>Microsoft Excel, Word &amp; PowerPoint</li><li>Market &amp; trend analysis</li><li>Risk management</li><li>Financial report reading</li><li>Technical chart analysis</li></ul></div>
+        <div class="skill-box"><h3>Accounting coursework</h3><ul><li>Intro to Financial Accounting</li><li>Intermediate Accounting I</li><li>Intro to Managerial Accounting</li><li>Financial Management</li></ul></div>
+        <div class="skill-box"><h3>Certifications &amp; languages</h3><ul><li>LSEG Workspace Certification Assessment</li><li>W!se Financial Literacy</li><li>Vietnamese — native</li><li>English — professional</li></ul></div>
+      </div>
+    </section>
+    <section id="projects" aria-labelledby="projects-title">
+      <p class="eyebrow">Applied financial analysis</p><h2 id="projects-title">Selected projects</h2>
+      <p class="intro">Two ongoing analytical activities drawn from my trading experience, focused on research, decision-making, and managing risk.</p>
+      <div class="projects">
+        <article class="card">
+          <div class="number" aria-hidden="true">01</div><p class="tag">Independent market research · October 2025–present</p>
+          <h3>Vietnamese Equity Research &amp; Trading</h3>
+          <p>Research blue-chip companies and earnings reports in the Vietnamese stock market to inform longer-term investment decisions, while using technical analysis to assess short-term entry and exit points.</p>
+          <p class="tools">Financial reports · Technical analysis · Risk controls</p>
+          <details><summary>Methods &amp; approach</summary><ul><li>Analyze charts with Ichimoku Cloud, MACD, RSI, Wyckoff, and trendlines.</li><li>Use stop-loss and take-profit strategies to manage positions.</li><li>Combine company research with market trend analysis.</li></ul></details>
+        </article>
+        <article class="card">
+          <div class="number" aria-hidden="true">02</div><p class="tag">Independent trading · December 2025–present</p>
+          <h3>Global Markets &amp; Portfolio Risk Analysis</h3>
+          <p>Analyze global financial markets, including foreign exchange and cryptocurrency assets, to guide trading decisions and manage portfolio exposure through diversification and stop-loss strategies.</p>
+          <p class="tools">Market analysis · Diversification · Stop-loss strategies</p>
+          <details><summary>Methods &amp; approach</summary><ul><li>Research market movements and evaluate trading opportunities.</li><li>Use financial market platforms such as MetaTrader, TradingView, or Trading Economics.</li><li>Apply portfolio risk controls to trading decisions.</li></ul></details>
+        </article>
+      </div>
+    </section>
+    <section id="experience" aria-labelledby="experience-title">
+      <p class="eyebrow">Communication &amp; involvement</p><h2 id="experience-title">Experience beyond the numbers</h2>
+      <div class="experience">
+        <article class="role"><p class="date">May 2023–August 2026 · Hai Phong, Vietnam</p><h3>Tutor &amp; Teaching Assistant</h3><p><strong>TA English Language Center</strong></p><p>Tutored more than 300 students in small groups of 1–3, supported English events through planning and scriptwriting, and provided translation support for a foreign teacher.</p><p>Helped students improve by an average of 1–2 letter grades over the summer and build confidence using English in everyday life.</p></article>
+        <article class="role"><p class="date">September 2025–present</p><h3>Accounting Association Member</h3><p><strong>Rutgers University Accounting Association</strong></p><p>Participate in accounting and finance meetings, workshops, and networking events to connect with peers and professionals and explore industry trends and career paths.</p><p>Attend guest speaker sessions covering auditing, taxation, and financial analysis.</p></article>
+      </div>
+    </section>
+    <aside id="contact" class="contact" aria-labelledby="contact-title">
+      <div><h2 id="contact-title">Let's connect.</h2><p>Interested in accounting, finance, and opportunities to learn.</p></div>
+      <div class="contact-links"><a href="mailto:ap3107@scarletmail.rutgers.edu">ap3107@scarletmail.rutgers.edu</a><a href="https://www.linkedin.com/in/brian-phung-258018384/">Find me on LinkedIn &rarr;</a></div>
+    </aside>
+  </main>
+  <footer><div class="wrap">Brian Phung · Accounting &amp; Finance Portfolio · Rutgers Business School</div></footer>
+</body>
+</html>
